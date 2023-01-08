@@ -13,6 +13,7 @@
 		F882837226CE5EBE006BCBDC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F882837126CE5EBE006BCBDC /* Preview Assets.xcassets */; };
 		F882837A26CE5F3C006BCBDC /* AlignmentGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882837926CE5F3C006BCBDC /* AlignmentGuide.swift */; };
 		F882837D26CE8747006BCBDC /* TextAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882837C26CE8747006BCBDC /* TextAlignment.swift */; };
+		F8830835296AFB570007701F /* JSBridgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8830834296AFB570007701F /* JSBridgeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		F882837126CE5EBE006BCBDC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F882837926CE5F3C006BCBDC /* AlignmentGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentGuide.swift; sourceTree = "<group>"; };
 		F882837C26CE8747006BCBDC /* TextAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAlignment.swift; sourceTree = "<group>"; };
+		F8830834296AFB570007701F /* JSBridgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSBridgeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		F882836926CE5EBC006BCBDC /* SwiftUI-Voyager */ = {
 			isa = PBXGroup;
 			children = (
+				F8830833296AFB410007701F /* JSBridge */,
 				F882837826CE5F16006BCBDC /* Alignment */,
 				F882836A26CE5EBC006BCBDC /* SwiftUI_VoyagerApp.swift */,
 				F882836C26CE5EBC006BCBDC /* ContentView.swift */,
@@ -87,6 +90,14 @@
 				F882837C26CE8747006BCBDC /* TextAlignment.swift */,
 			);
 			path = TextAlignment;
+			sourceTree = "<group>";
+		};
+		F8830833296AFB410007701F /* JSBridge */ = {
+			isa = PBXGroup;
+			children = (
+				F8830834296AFB570007701F /* JSBridgeView.swift */,
+			);
+			path = JSBridge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +173,7 @@
 				F882836D26CE5EBC006BCBDC /* ContentView.swift in Sources */,
 				F882836B26CE5EBC006BCBDC /* SwiftUI_VoyagerApp.swift in Sources */,
 				F882837D26CE8747006BCBDC /* TextAlignment.swift in Sources */,
+				F8830835296AFB570007701F /* JSBridgeView.swift in Sources */,
 				F882837A26CE5F3C006BCBDC /* AlignmentGuide.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

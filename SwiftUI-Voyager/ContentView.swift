@@ -9,8 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            ScrollView {
+                VStack(alignment: .leading) {
+                    NavigationLink {
+                        JSBridgeView()
+                            .navigationTitle("JSBridge")
+                    } label: {
+                        Text("JSBridge")
+                    }
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.all)
+            }.navigationTitle("Home")
+        }
     }
 }
 
