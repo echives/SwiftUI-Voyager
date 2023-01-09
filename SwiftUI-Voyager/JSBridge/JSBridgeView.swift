@@ -49,6 +49,31 @@ private class CalculationMessageHandler: NSObject, WKScriptMessageHandler {
     }
 }
 
+private class SubtractionMessageHandler: NSObject, WKScriptMessageHandler {
+    weak var webView: WKWebView?
+
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        print(message.name)
+        guard
+            let params = message.body as? [String: Any],
+            let numberC = params["numberC"] as? Int,
+            let numberD = params["numberD"] as? Int,
+            let callback = params["callback"] as? String
+        else { return }
+        print(callback)
+        let result = numberC - numberD
+        if let jsFunc = Utils.generateJSFunction(callback: callback, error: nil, params: ["result": result]) {
+            print(jsFunc)
+            // 修改延时时间，查看bridge timeout的影响
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
+                self?.webView?.evaluateJavaScript(jsFunc, completionHandler: { _, error in
+                    print(error.debugDescription)
+                })
+            }
+        }
+    }
+}
+
 private struct SwiftUIWebView: UIViewRepresentable {
     typealias UIViewType = WKWebView
 
@@ -58,10 +83,13 @@ private struct SwiftUIWebView: UIViewRepresentable {
         let configuration = WKWebViewConfiguration()
         let helloworld = HelloWorldMessageHandler()
         let calculation = CalculationMessageHandler()
+        let subtraction = SubtractionMessageHandler()
         configuration.userContentController.add(helloworld, name: "helloworld")
         configuration.userContentController.add(calculation, name: "calculateAddition")
+        configuration.userContentController.add(subtraction, name: "calculationSubtraction")
         webView = WKWebView(frame: .zero, configuration: configuration)
         calculation.webView = webView
+        subtraction.webView = webView
         webView.load(URLRequest(url: URL(string: "https://echives.github.io/learn_vue/#/jsbridge")!))
     }
 
