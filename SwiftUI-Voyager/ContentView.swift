@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 VStack(alignment: .leading) {
                     NavigationLink {
@@ -17,6 +17,13 @@ struct ContentView: View {
                             .navigationTitle("JSBridge")
                     } label: {
                         Text("JSBridge")
+                    }
+
+                    NavigationLink {
+                        NavigationHomeView()
+                            .navigationTitle("Navigation")
+                    } label: {
+                        Text("Navigation")
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
