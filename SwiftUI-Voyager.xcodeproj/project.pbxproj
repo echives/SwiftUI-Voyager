@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F827E4DF2A2E37D5008B1AC0 /* Layout_CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F827E4DE2A2E37D5008B1AC0 /* Layout_CustomLayout.swift */; };
+		F861769B2A2882DA001605F6 /* Layout_Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F861769A2A2882DA001605F6 /* Layout_Basic.swift */; };
+		F861769F2A2885ED001605F6 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = F861769E2A2885ED001605F6 /* readme.md */; };
 		F882836B26CE5EBC006BCBDC /* SwiftUI_VoyagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882836A26CE5EBC006BCBDC /* SwiftUI_VoyagerApp.swift */; };
 		F882836D26CE5EBC006BCBDC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F882836C26CE5EBC006BCBDC /* ContentView.swift */; };
 		F882836F26CE5EBE006BCBDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F882836E26CE5EBE006BCBDC /* Assets.xcassets */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F827E4DE2A2E37D5008B1AC0 /* Layout_CustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout_CustomLayout.swift; sourceTree = "<group>"; };
+		F861769A2A2882DA001605F6 /* Layout_Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout_Basic.swift; sourceTree = "<group>"; };
+		F861769E2A2885ED001605F6 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		F882836726CE5EBC006BCBDC /* SwiftUI-Voyager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Voyager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F882836A26CE5EBC006BCBDC /* SwiftUI_VoyagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_VoyagerApp.swift; sourceTree = "<group>"; };
 		F882836C26CE5EBC006BCBDC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +52,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F86176992A2882C9001605F6 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				F861769E2A2885ED001605F6 /* readme.md */,
+				F882837B26CE5FA6006BCBDC /* TextAlignment */,
+				F861769A2A2882DA001605F6 /* Layout_Basic.swift */,
+				F882837926CE5F3C006BCBDC /* AlignmentGuide.swift */,
+				F827E4DE2A2E37D5008B1AC0 /* Layout_CustomLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		F882835E26CE5EBC006BCBDC = {
 			isa = PBXGroup;
 			children = (
@@ -65,10 +83,10 @@
 		F882836926CE5EBC006BCBDC /* SwiftUI-Voyager */ = {
 			isa = PBXGroup;
 			children = (
+				F86176992A2882C9001605F6 /* Layout */,
 				F8CB538529D2C4C00004B066 /* Navigation */,
 				F8BD8E4B299A238700BFD966 /* Vision */,
 				F8830833296AFB410007701F /* JSBridge */,
-				F882837826CE5F16006BCBDC /* Alignment */,
 				F882836A26CE5EBC006BCBDC /* SwiftUI_VoyagerApp.swift */,
 				F882836C26CE5EBC006BCBDC /* ContentView.swift */,
 				F882836E26CE5EBE006BCBDC /* Assets.xcassets */,
@@ -83,15 +101,6 @@
 				F882837126CE5EBE006BCBDC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		F882837826CE5F16006BCBDC /* Alignment */ = {
-			isa = PBXGroup;
-			children = (
-				F882837B26CE5FA6006BCBDC /* TextAlignment */,
-				F882837926CE5F3C006BCBDC /* AlignmentGuide.swift */,
-			);
-			path = Alignment;
 			sourceTree = "<group>";
 		};
 		F882837B26CE5FA6006BCBDC /* TextAlignment */ = {
@@ -187,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F882837226CE5EBE006BCBDC /* Preview Assets.xcassets in Resources */,
+				F861769F2A2885ED001605F6 /* readme.md in Resources */,
 				F882836F26CE5EBE006BCBDC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,6 +210,7 @@
 			files = (
 				F882836D26CE5EBC006BCBDC /* ContentView.swift in Sources */,
 				F882836B26CE5EBC006BCBDC /* SwiftUI_VoyagerApp.swift in Sources */,
+				F861769B2A2882DA001605F6 /* Layout_Basic.swift in Sources */,
 				F8CB538B29D2CBAA0004B066 /* NavigationNumberIncrement.swift in Sources */,
 				F882837D26CE8747006BCBDC /* TextAlignment.swift in Sources */,
 				F8CB538929D2C5720004B066 /* NavigationChildView.swift in Sources */,
@@ -207,6 +218,7 @@
 				F8BD8E4D299A239300BFD966 /* VisionHomeView.swift in Sources */,
 				F8830835296AFB570007701F /* JSBridgeView.swift in Sources */,
 				F882837A26CE5F3C006BCBDC /* AlignmentGuide.swift in Sources */,
+				F827E4DF2A2E37D5008B1AC0 /* Layout_CustomLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
